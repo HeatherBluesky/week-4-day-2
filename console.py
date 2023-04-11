@@ -17,13 +17,16 @@ album_2 = Album("Awaken My Love", "hip-hop", artist_2)
 album_repository.save(album_2)
 
 
+
 results = artist_repository.get_albums(artist_1)
 
 for result in results:
     print(result.__dict__)
 
-album_2.genre = "rap"
-album_repository.update(album_2)
-updated_albums = album_repository.select_all()
-for row in updated_albums:
+
+
+album_1.genre = "rap"
+album_repository.update(album_1)
+updated_album = album_repository.select_all()
+for row in updated_album:
     print(row.__dict__)
