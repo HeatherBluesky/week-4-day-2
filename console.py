@@ -21,3 +21,9 @@ results = artist_repository.get_albums(artist_1)
 
 for result in results:
     print(result.__dict__)
+
+album_2.genre = "rap"
+album_repository.update(album_2)
+updated_albums = album_repository.select_all()
+for row in updated_albums:
+    print(row.__dict__)

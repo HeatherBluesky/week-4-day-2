@@ -42,7 +42,7 @@ def select(id):
 
     if results:
         result = results[0]
-        artist = artist(result['name'], result['id'] )
+        artist = Artist(result['name'], result['id'] )
     return artist
 
 
